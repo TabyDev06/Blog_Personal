@@ -1,10 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     width: 100%;
+    overflow-x: hidden;
     background-color: #fdfdfd;
     font-family: "Italiana";
     color: #222;
@@ -41,10 +47,22 @@ li {
 a {
     color: #1a1a1a;
     text-decoration: none;
+    position: relative;
 }
 
-a:hover {
-    color: #0066cc;
+a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #111;
+    transition: width 0.6s ease;
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 /*Primera Seccion*/
@@ -55,18 +73,31 @@ a:hover {
     align-items: center;
     flex-direction: column;
     margin: 0;
+    padding-top: 1%;
 }
 
 h2 {
-    font-size: 2000%;
+    font-size: 1200%;
     color: #111;
     margin: 0;
+    animation: FadeIn 2s ease-out;
 }
 
 #Home_Message {
     margin: 0;
     color: #333;
     font-size: 120%;
+    animation: FadeIn 4s ease-out;
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /*Segunda Seccion*/
@@ -96,7 +127,7 @@ h2 {
     padding: 0.5% 1.5%;
     width: 50%;
     height: 70vh;
-    font-size: 120%;
+    font-size: 115%;
 }
 
 /*Tercera Seccion*/
@@ -124,7 +155,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     list-style: none;
     margin: 0 auto;
     padding: 0;
@@ -139,6 +170,13 @@ h2 {
     width: 250px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    margin-top: 2.5%;
+}
+
+.SkillsGrid li:hover {
+    transform: scale(1.05);
 }
 
 .SkillsGrid h4 {
@@ -151,7 +189,7 @@ h2 {
     height: 100vh;
     padding-top: 9%;
     box-sizing: border-box;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -159,36 +197,24 @@ h2 {
     display: flex;
     justify-content: center;
     font-size: 300%;
-    margin: 0;
-    margin-bottom: 3%;
+    margin-left: 15%;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
     background-color: #f0f0f0;
-    width: 30%;
+    width: 33%;
     border-radius: 20px;
     padding: 1.5%;
+    margin-left: 25%;
+    height: 85%;
 }
 
 label {
-    display: flex;
-    justify-content: center;
     font-size: 120%;
-}
-
-textarea {
-    display: flex;
-    border: none;
-    background-color: #ffffff;
-    color: #111;
-    width: 90%;
-    height: 5vh;
-    border-radius: 15px;
 }
 
 input {
@@ -199,10 +225,29 @@ input {
     width: 90%;
     height: 5vh;
     border-radius: 15px;
+    padding: 10px;
+}
+
+textarea {
+    display: flex;
+    border: none;
+    background-color: #ffffff;
+    color: #111;
+    width: 90%;
+    height: 15vh;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 #send {
+    font-family: "Italiana";
     margin-top: 5%;
+    transition: 1s ease;
+    font-size: 110%;
+}
+
+#send:hover {
+    background-color: #d7d7d7;
 }
 
 /*Footer*/
@@ -238,4 +283,93 @@ footer {
 .social-links a:hover {
     color: #111;
     text-decoration: underline;
+    text-decoration: none;
+}
+
+/*Media Queries*/
+@media (max-width: 480px) {
+
+    /*Nav Bar*/
+    .Title_bar {
+        font-size: 60%;
+    }
+
+    .Logo {
+        width: 10%;
+    }
+
+    /*Home*/
+    h2 {
+        display: flex;
+        font-size: 450%;
+        margin-top: -50%;
+    }
+
+    #Home_Message {
+        font-size: 80%;
+    }
+
+    /*About Me*/
+    #AboutMe {
+        flex-direction: column;
+    }
+
+    #Title_About {
+        margin: 0;
+        font-size: 150%;
+        width: 100%;
+        justify-content: center;
+        margin-top: -180px;
+    }
+
+    #Biography {
+        width: 40vh;
+        height: 60vh;
+        font-size: 90%;
+    }
+
+    /*Skills*/
+    #Skills {
+        padding-top: 20%;
+    }
+
+    #Title_Skills {
+        font-size: 150%;
+    }
+
+    #MySkills {
+        font-size: 100%;
+        margin: 5%;
+    }
+
+    .SkillsGrid {
+        gap: 10px;
+    }
+
+    .SkillsGrid li {
+        background-color: #e0e0e0;
+        width: 150px;
+        padding: 10px;
+        height: 11vh;
+        font-size: 90%;
+    }
+
+    /*Contact*/
+    #Contact {
+        flex-direction: column;
+        padding-top: 25%;
+    }
+
+    #Title_Contact{
+        font-size: 150%;
+        width: 100%;
+        margin: 0;
+    }
+
+    form{
+        width: 80%;
+        margin-left: 0;
+        margin-top: 20px;
+        height: 60%;
+    }
 }
