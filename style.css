@@ -360,13 +360,13 @@ footer {
         padding-top: 25%;
     }
 
-    #Title_Contact{
+    #Title_Contact {
         font-size: 150%;
         width: 100%;
         margin: 0;
     }
 
-    form{
+    form {
         width: 80%;
         margin-left: 0;
         margin-top: 20px;
@@ -374,77 +374,75 @@ footer {
     }
 }
 
-/* Estilos para móviles pequeños (≤360px): perfecto para Redmi 14C */
+/*Especial para mi Redmi14C*/
 @media (max-width: 360px) {
-  h2 {
-    font-size: 300%;
-    margin-top: -35%;
-    text-align: center;
-  }
 
-  #Home_Message {
-    font-size: 85%;
-    padding: 0 12px;
-    text-align: center;
-  }
+    /*Home*/
+    h2{
+        margin-top: 1%;
+    }
 
-  #AboutMe {
-    flex-direction: column;
-    padding-top: 25%;
-  }
+    /*About Me*/
+    #AboutMe {
+        flex-direction: column;
+    }
 
-  #Title_About {
-    font-size: 140%;
-    width: 100%;
-    margin-top: -150px;
-    text-align: center;
-  }
+    #Title_About {
+        margin-top: 10%;
+        font-size: 140%;
+        text-align: center;
+    }
 
-  #Biography {
-    width: 90%;
-    font-size: 85%;
-    padding: 15px;
-  }
+    #Biography {
+        width: 90%;
+        font-size: 80%;
+        height: 75vh;
+    }
 
-  .SkillsGrid li {
-    width: 130px;
-    padding: 8px;
-    font-size: 85%;
-  }
+    /*Skills*/
+    #Title_Skills {
+        margin-top: 3%;
+    }
 
-  #Contact {
-    flex-direction: column;
-    padding-top: 25%;
-  }
+    .SkillsGrid li {
+        margin: 0;
+        width: 130px;
+        padding: 8px;
+        font-size: 85%;
+        height: 1%;
+    }
 
-  form {
-    width: 90%;
-    margin: 20px auto 0;
-    padding: 20px;
-    height: auto;
-  }
+    /*Contact*/
+    #Contact {
+        flex-direction: column;
+        padding-top: 25%;
+    }
 
-  input, textarea {
-    width: 100%;
-    font-size: 85%;
-    padding: 10px;
-  }
+    /*Formulario*/
+    form {
+        width: 90%;
+        margin: 20px auto 0;
+        padding: 20px;
+        height: auto;
+    }
 
-  #send {
-    width: 100%;
-    font-size: 95%;
-    padding: 8px;
-  }
+    /*Inputs y Textarea*/
+    input,
+    textarea {
+        width: 100%;
+        font-size: 85%;
+        padding: 10px;
+    }
 
-  footer {
-    font-size: 85%;
-  }
-}
+    /*Enviar*/
+    #send {
+        width: 100%;
+        font-size: 95%;
+        padding: 8px;
+    }
 
-/* Estilos para móviles estándar/basico (≤480px) */
-@media (max-width: 480px) {
-  h2 { font-size: 350%; margin-top: -40%; }
-  #Home_Message { font-size: 90%; padding: 0 15px; }
-  /* Ajustes similares a los anteriores, pero ligeramente mayores */
-  /* … */
+    /*Footer*/
+    footer {
+        font-size: 85%;
+    }
 }
