@@ -127,7 +127,7 @@ h2 {
     padding: 0.5% 1.5%;
     width: 50%;
     height: 70vh;
-    font-size: 115%;
+    font-size: 104%;
 }
 
 /*Tercera Seccion*/
@@ -373,6 +373,14 @@ footer {
         height: 60%;
     }
 }
+
+/*MediaQueries Laptop*/
+@media (max-width: 1536px){
+    #Biography{
+        font-size: 120%;
+    }
+}
+
 
 /*Especial para mi Redmi14C*/
 @media (max-width: 360px) {
