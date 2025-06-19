@@ -362,7 +362,7 @@ footer {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 768px) {
 
     /* General */
     html,
@@ -388,27 +388,27 @@ footer {
     }
 
     /*Home*/
-    h2{
+    h2 {
         font-size: 450%;
     }
 
     /*About Me*/
-    #AboutMe{
+    #AboutMe {
         flex-direction: column;
     }
 
-    #Title_About{
+    #Title_About {
         width: 100%;
         margin: 0;
         justify-content: center;
         font-size: 250%;
     }
 
-    #Biography{
+    #Biography {
         display: none;
     }
 
-    #bio-short{
+    #bio-short {
         display: flex;
         background-color: #f0f0f0;
         margin: 0;
@@ -421,12 +421,12 @@ footer {
     }
 
     /*Skills*/
-    #Title_Skills{
+    #Title_Skills {
         margin-top: 17%;
         font-size: 250%;
     }
 
-    #MySkills{
+    #MySkills {
         margin-bottom: 3%;
         margin: 5%;
     }
@@ -443,39 +443,39 @@ footer {
     }
 
     /*Contact*/
-    #Contact{
+    #Contact {
         flex-direction: column;
     }
 
-    #Title_Contact{
+    #Title_Contact {
         width: 100%;
         margin: 0;
         font-size: 250%;
         margin-top: 18%;
     }
 
-    form{
+    form {
         width: 90%;
         height: 65%;
         padding: 10%;
         margin: 15%;
     }
 
-    label{
+    label {
         font-size: 130%;
     }
 
-    input{
+    input {
         height: 2vh;
         width: 90%;
     }
 
-    textarea{
+    textarea {
         width: 90%;
         height: 15vh;
     }
 
-    #send{
+    #send {
         display: flex;
         justify-content: center;
         align-items: center;
