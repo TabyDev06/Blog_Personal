@@ -112,7 +112,7 @@ h2 {
 
 #Title_About {
     display: flex;
-    font-size: 300%;
+    font-size: 500%;
     align-items: center;
     margin-left: 2%;
     width: 30%;
@@ -123,42 +123,48 @@ h2 {
     align-items: center;
     background-color: #f0f0f0;
     border-radius: 15px;
-    padding: 0.5% 1.5%;
+    padding: 1.5%;
     width: 50%;
-    height: 70vh;
-    font-size: 104%;
+    height: 75vh;
+    font-size: 160%;
+}
+
+#bio-short {
+    display: none;
 }
 
 /*Tercera Seccion*/
 #Skills {
     display: flexbox;
     height: 100vh;
-    padding-top: 9%;
+    padding-top: 10%;
     box-sizing: border-box;
 }
 
 #Title_Skills {
     display: flex;
     justify-content: center;
-    font-size: 300%;
+    font-size: 500%;
     margin: 0;
+    margin-bottom: 2%;
 }
 
 #MySkills {
     display: flex;
     justify-content: center;
-    font-size: 120%;
+    font-size: 160%;
+    margin-bottom: 2%;
 }
 
 .SkillsGrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 100px;
     list-style: none;
     margin: 0 auto;
     padding: 0;
-    max-width: 1200px;
+    max-width: 1500px;
     width: 100%;
 }
 
@@ -166,12 +172,13 @@ h2 {
     background-color: #e0e0e0;
     padding: 20px;
     border-radius: 20px;
-    width: 250px;
+    width: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.5s ease;
     cursor: pointer;
     margin-top: 2.1%;
+    font-size: 130%;
 }
 
 .SkillsGrid li:hover {
@@ -195,7 +202,7 @@ h2 {
 #Title_Contact {
     display: flex;
     justify-content: center;
-    font-size: 300%;
+    font-size: 500%;
     margin-left: 15%;
 }
 
@@ -213,10 +220,11 @@ form {
 }
 
 label {
-    font-size: 120%;
+    font-size: 180%;
 }
 
 input {
+    font-family: "Italiana";
     display: flex;
     border: none;
     background-color: #ffffff;
@@ -224,25 +232,31 @@ input {
     width: 90%;
     height: 5vh;
     border-radius: 15px;
-    padding: 10px;
+    padding: 20px;
+    font-size: 180%;
 }
 
 textarea {
+    font-family: "Italiana";
     display: flex;
     border: none;
     background-color: #ffffff;
     color: #111;
     width: 90%;
-    height: 15vh;
+    height: 20vh;
     border-radius: 15px;
     padding: 10px;
+    font-size: 150%;
 }
 
 #send {
+    display: flex;
+    justify-content: center;
     font-family: "Italiana";
     margin-top: 5%;
     transition: 1s ease;
-    font-size: 110%;
+    font-size: 180%;
+    padding: 10px;
 }
 
 #send:hover {
@@ -251,11 +265,11 @@ textarea {
 
 /*Footer*/
 footer {
-    background-color: #dddddd;
-    color: #111;
+    background-color: #6d6d6d;
+    color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    font-size: 90%;
+    font-size: 150%;
 }
 
 .footer-content {
@@ -285,165 +299,192 @@ footer {
     text-decoration: none;
 }
 
-/*Media Queries*/
-@media (max-width: 480px) {
+@media (max-width: 1536px) {
 
-    /*Nav Bar*/
+    /*About Me*/
+    #Title_About {
+        font-size: 350%;
+    }
+
+    #Biography {
+        font-size: 115%;
+    }
+
+    /*Skills*/
+    #Title_Skills {
+        font-size: 350%;
+    }
+
+    #MySkills {
+        font-size: 125%;
+    }
+
+    .SkillsGrid {
+        gap: 20px;
+        max-width: 1300px;
+    }
+
+    .SkillsGrid li {
+        padding: 25px;
+        font-size: 110%;
+    }
+
+    /*Contact*/
+    form {
+        height: 90%;
+    }
+
+    #Title_Contact {
+        font-size: 350%;
+    }
+
+    label {
+        font-size: 140%;
+    }
+
+    input {
+        font-size: 110%;
+    }
+
+    textarea {
+        font-size: 110%;
+    }
+
+    #send {
+        font-size: 140%;
+        margin: 0;
+        padding: 1%;
+    }
+
+    /*Footer*/
+    footer {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+
+    /* General */
+    html,
+    body {
+        font-size: 90%;
+        overflow-x: hidden;
+    }
+
+    /* Header */
     .Title_bar {
-        font-size: 60%;
+        flex-direction: row;
+        align-items: center;
+        font-size: 80%;
     }
 
     .Logo {
         width: 10%;
     }
 
-    /*Home*/
-    h2 {
-        display: flex;
-        font-size: 450%;
-        margin-top: -50%;
+    .Menu ul {
+        gap: 10px;
+        padding: 10px 0;
     }
 
-    #Home_Message {
-        font-size: 80%;
+    /*Home*/
+    h2{
+        font-size: 450%;
     }
 
     /*About Me*/
-    #AboutMe {
+    #AboutMe{
         flex-direction: column;
     }
 
-    #Title_About {
-        margin: 0;
-        font-size: 150%;
+    #Title_About{
         width: 100%;
+        margin: 0;
         justify-content: center;
-        margin-top: -180px;
+        font-size: 250%;
     }
 
-    #Biography {
-        width: 40vh;
-        height: 60vh;
-        font-size: 90%;
+    #Biography{
+        display: none;
+    }
+
+    #bio-short{
+        display: flex;
+        background-color: #f0f0f0;
+        margin: 0;
+        width: 90%;
+        height: 70%;
+        margin-top: 10%;
+        border-radius: 15px;
+        font-size: 150%;
+        padding: 13px;
     }
 
     /*Skills*/
-    #Skills {
-        padding-top: 20%;
+    #Title_Skills{
+        margin-top: 17%;
+        font-size: 250%;
     }
 
-    #Title_Skills {
-        font-size: 150%;
-    }
-
-    #MySkills {
-        font-size: 100%;
+    #MySkills{
+        margin-bottom: 3%;
         margin: 5%;
     }
 
     .SkillsGrid {
-        gap: 10px;
+        gap: 20px;
+        justify-content: center;
     }
 
     .SkillsGrid li {
-        background-color: #e0e0e0;
-        width: 150px;
+        width: calc(50% - 20px);
+        font-size: 120%;
         padding: 10px;
-        height: 11vh;
-        font-size: 90%;
     }
 
     /*Contact*/
-    #Contact {
+    #Contact{
         flex-direction: column;
-        padding-top: 25%;
     }
 
-    #Title_Contact {
-        font-size: 150%;
+    #Title_Contact{
         width: 100%;
         margin: 0;
+        font-size: 250%;
+        margin-top: 18%;
     }
 
-    form {
-        width: 80%;
-        margin-left: 0;
-        margin-top: 20px;
-        height: 60%;
-    }
-}
-
-/*Especial para mi Redmi14C*/
-@media (max-width: 360px) {
-
-    /*Home*/
-    h2 {
-        margin-top: 1%;
-    }
-
-    /*About Me*/
-    #AboutMe {
-        flex-direction: column;
-    }
-
-    #Title_About {
-        margin-top: 10%;
-        font-size: 140%;
-        text-align: center;
-    }
-
-    #Biography {
+    form{
         width: 90%;
-        font-size: 90%;
-        height: 80vh;
-        text-align: start;
-        padding-left: 20px;
+        height: 65%;
+        padding: 10%;
+        margin: 15%;
     }
 
-    /*Skills*/
-    #Title_Skills {
-        margin-top: 3%;
+    label{
+        font-size: 130%;
     }
 
-    .SkillsGrid li {
-        margin: 0;
-        width: 130px;
-        padding: 8px;
-        font-size: 85%;
-        height: 1%;
-    }
-
-    /*Contact*/
-    #Contact {
-        flex-direction: column;
-        padding-top: 25%;
-    }
-
-    /*Formulario*/
-    form {
+    input{
+        height: 2vh;
         width: 90%;
-        margin: 20px auto 0;
-        padding: 20px;
+    }
+
+    textarea{
+        width: 90%;
+        height: 15vh;
+    }
+
+    #send{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        padding: 3%;
         height: auto;
     }
 
-    /*Inputs y Textarea*/
-    input,
-    textarea {
-        width: 100%;
-        font-size: 85%;
-        padding: 10px;
-    }
-
-    /*Enviar*/
-    #send {
-        width: 100%;
-        font-size: 95%;
-        padding: 8px;
-    }
-
-    /*Footer*/
     footer {
-        font-size: 85%;
+        font-size: 110%;
     }
 }
